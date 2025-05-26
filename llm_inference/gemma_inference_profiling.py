@@ -13,8 +13,8 @@ import torch
 import time
 
 # Enable parallel processing
-# torch.set_num_threads(8)  # Use 8 CPU threads
-# torch.set_num_interop_threads(8)  # Use 8 threads for parallel data loading
+torch.set_num_threads(8)  # Use 8 CPU threads
+# torch.set_num_interop_threads(8)  # Use 8 threads for parallel data loading -- inter-op parallelism does not help much
 
 # Load and cache model locally to avoid downloading it every time
 model_name = "gemma-3-1b-it"
